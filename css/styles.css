@@ -480,7 +480,7 @@ background: rgba(46, 47, 66, 0.7);
   line-height: 24px;
   color: var(--color-white);
   margin-bottom: 16px;
-  letter-spacing: 0.02;
+  letter-spacing: 0.02em;
 }
 .icon-footer-list {
   display: flex;
