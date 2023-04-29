@@ -199,10 +199,8 @@ button {
 .hero::before {
   content: "";
   position: absolute;
-left: 0px;
-top: 72px;
-
-/* GREY */
+  left: 0px;
+  top: 72px;
 
 background: rgba(46, 47, 66, 0.7);
 }
@@ -267,6 +265,19 @@ background: rgba(46, 47, 66, 0.7);
 .features-list-item {
   width: 264px;
 }
+.features-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  background: var(--color-cloud);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.features-icon {
+  width: 64px;
+  height: 64px;
+}
 .features-item-title {
   color: var(--color-navy-blue);
   margin-bottom: 8px;
@@ -316,6 +327,7 @@ background: rgba(46, 47, 66, 0.7);
 
 .team-list-item {
   background-color: var(--color-white);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px; 
 }
 .team-item-img {
@@ -341,6 +353,15 @@ background: rgba(46, 47, 66, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.ellipse:hover,
+.ellipse:focus {
+  background-color: var(--color-ocean);
+}
+.media-team-link {
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 .icon-team-media {
   width: 16px;
@@ -451,6 +472,11 @@ background: rgba(46, 47, 66, 0.7);
   display: inline-flex;
   gap: 16px;
 }
+.footer-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footer-ellipse {
   width: 40px;
   height: 40px;
@@ -505,15 +531,23 @@ background: rgba(46, 47, 66, 0.7);
   color: var(--color-white);
   background-color: var(--color-ocean);
   border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
+  flex-basis: calc((100% - 48px)/3);
 }
 .portfolio-list-item {
   background: var(--color-white);
-  flex-basis: calc((100% - 48px)/3);
+  max-width: 360px;
+  
+}
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+  border: 1px solid var(--color-cloud);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-img {
 }
@@ -526,7 +560,7 @@ background: rgba(46, 47, 66, 0.7);
   color: var(--color-slate);
 }
 .portfolio-item-border {
-  border: 1px solid #E7E9FC;
+  border: 1px solid var(--color-cornflower);
   border-top: none;
   padding: 32px 16px
 }
